@@ -32,7 +32,7 @@ namespace MvcApplicationPBI.Controllers
 
                 //Client ID is used by the application to identify themselves to the users that they are requesting permissions from. 
                 //You get the client id when you register your Azure app.
-                {"client_id", "721219de-20fe-4761-87b1-09d852bbfba1"},
+                {"client_id", "value"},
 
                 //Resource uri to the Power BI resource to be authorized
                 {"resource", "https://analysis.windows.net/powerbi/api"},
@@ -68,8 +68,8 @@ namespace MvcApplicationPBI.Controllers
             AuthenticationContext AC = new AuthenticationContext(authorityUri, TC);
 
             ClientCredential cc = new ClientCredential
-                ("721219de-20fe-4761-87b1-09d852bbfba1",
-                "VBkR+bgonrKS2OQh3omxk0M2LVKi097FvSSAaGEPLBs=");
+                (" app id",
+                "app secreat key");
 
             AuthenticationResult AR = AC.AcquireTokenByAuthorizationCode(code, new Uri(redirectUri), cc);
 
