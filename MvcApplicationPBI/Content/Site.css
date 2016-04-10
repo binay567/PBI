@@ -754,39 +754,80 @@ tr.pager td {
             margin: 0;
         }
 }
-#accordion {
-    list-style: none;
-    padding: 0 0 0 0;
-    width: 170px;
+
+.header {
+    background-color: #4d4d4d;
 }
-#accordion div {
-    display: block;
-    background-color: #FF9927;
-    font-weight: bold;
-    margin: 1px;
-    cursor: pointer;
-    padding: 5 5 5 7px;
-    list-style: circle;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+.user-avatar {
+    width: 50px;
+    height:50px;
+    margin-left: 25px;
+}
+
+.user-avatar img {
+    width: 100%;
+}
+.user-name {
+    color: #ffffff;
+    margin:0;
+}
+
+ul {
+    list-style: none;
 }
 #accordion ul {
-    list-style: none;
-    padding: 0 0 0 0;
-}
-#accordion ul{
     display: none;
 }
-#accordion ul li {
-    font-weight: normal;
-    cursor: auto;
-    background-color: #fff;
-    padding: 0 0 0 7px;
+
+#accordion  {
+    padding: 0;
 }
-#accordion a {
+
+#accordion div {
+    padding: 10px 20px;
+    background-color: #ccc;    
+    border-radius: 8px;    
+    margin: 8px 13px;
+    text-align: center;
+    font-weight: bold;  
+}
+
+.left {
+   float:left;
+   width: 15%;
+   background-color: #808080;
+   height: 100%;
+   position:absolute;
+   overflow-y: scroll;
+}
+#accordion li ul li {
+    padding : 10px 20px;
+    /* width:100%; */
+    background-color: #d9d9d9;
+    margin-top: 6px;
+    margin-right: 35px;
+    text-align: center;
     text-decoration: none;
+    border-radius: 5px;
 }
-#accordion a:hover {
-    text-decoration: underline;
+
+#accordion li ul li:hover {
+    background-color: #669999;
+    color: #ffffff;
+}
+
+
+#accordion li ul li a{
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#accordion li ul li a:hover{
+    background: none !important;
+    color: #ffffff;
 }

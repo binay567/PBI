@@ -5,19 +5,19 @@
 }
 
 
-<div>@ViewBag.user</div>
-<div style="width: 100%;overflow:auto;" >
- <div style="float:left; width: 30%;">
-    
-
-
-    <ul id="accordion">
-    <li><div>Sports</div>
-        <ul>
-            @*<li>@Ajax.ActionLink("VISION","VisionAndEthics", 
-            new AjaxOptions{ UpdateTargetId="divTarget", InsertionMode= InsertionMode.Replace})</li>
-            <li><a href="#">Cricket</a></li>
-            <li><a href="#">Football</a></li>*@
+<header class="header">
+    <div class="user-avatar">
+        <img src="http://lh3.googleusercontent.com/-IFrmlRCjB6s/AAAAAAAAAAI/AAAAAAAAHU4/-j7bGLp4w88/s120-c/photo.jpg"/>
+    </div>
+    <h4 class="user-name">>@ViewBag.user</h4>
+</header>
+<div class="container">
+ <div class="left">
+  <ul id="accordion">
+    <li>
+        <div>Reports</div>
+        <ul class="report-list">
+            
             @foreach (var item in @Model.value)
             {
                 <li>@Ajax.ActionLink(item.name,"GetIframe", new { embedurl=item.embedUrl },
@@ -25,7 +25,8 @@
             }
         </ul>
     </li>
-    <li><div>Technology</div>
+    <li>   
+     <div>Technology</div>
         <ul>
             <li><a href="#">iPhone</a></li>
             <li><a href="#">Facebook</a></li>
