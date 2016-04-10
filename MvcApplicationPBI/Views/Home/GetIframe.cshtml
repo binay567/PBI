@@ -1,0 +1,30 @@
+﻿
+ 
+<div><iframe id="iFrameEmbedReport" src="@ViewBag.url" height="800" width="600"></iframe></div>
+<script type="text/javascript">
+    var iframe = document.getElementById('iFrameEmbedReport');
+   
+    iframe.onload = postActionLoadReport;
+
+    function postActionLoadReport() {
+
+        // get the access token.
+       var accessToken ="@ViewBag.token";
+       
+        // return if no a
+        if ("" === accessToken)
+            return;
+
+        // construct the push message structure
+        // this structure also supports setting the reportId, groupId, height, and width.
+        // when using a report in a group, you must provide the groupId on the iFrame SRC
+        var m = { action: "loadReport", accessToken: accessToken };
+        message = JSON.stringify(m);
+
+        // push the message.
+        iframe = document.getElementById('iFrameEmbedReport');
+        iframe.contentWindow.postMessage(message, "*");;
+    }
+
+
+</script>
